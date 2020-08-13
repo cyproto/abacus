@@ -1,0 +1,184 @@
+body{
+	background: #24292e;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+ul,li{
+	margin:0;
+	padding:0;
+}
+h1,h3{
+  color: #fff;
+  text-align: center;
+}
+h1{
+  font-size: 60px;
+}
+footer{
+  margin-top: 50px;
+}
+.container{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.content{
+  width: 774px;
+  height: 312px;
+  box-shadow: 0px 0px 25px 15px #fff;
+}
+.abacus-list{
+	margin: 0 auto;
+	height: 322px;
+	width: 774px;
+	position: relative;
+}
+
+.ab-item{
+	width: 110px;
+	height: 252px;
+	position: relative;
+	display: inline-block;
+  .unit{
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    color: white;
+    right: 20px;
+    top: -60px;
+    text-align:center;
+    line-height: 30px;
+    font-size: 1.5em;
+  }
+}
+
+.up-beads-container{
+	height: 100px;
+	width: 110px;
+	border-bottom: 5px solid #999;
+	overflow: hidden;
+	position: relative;
+
+}
+
+.down-beads-container{
+	width: 110px;
+	height: 200px;
+	border-top: 3px solid #999;
+	overflow: hidden;
+	position: relative;
+}
+
+.up-vertical-pole, .down-vertical-pole{
+
+	width: 5px;
+	height: 100px;
+	background: #999;
+	margin: 0 auto;
+}
+
+.down-vertical-pole{
+	height: 205px;
+}
+
+.upbead{
+	width: 60px;
+	height: 40px;
+	border-radius: 50%;
+	background: #e0e0e0;
+	left: 25%;
+	top: 0;
+	position: absolute;
+	display: block;
+  opacity: 0.9;
+}
+
+#source{
+  color: #fff;
+  margin-left: 10px;
+}
+
+.downbead{
+	position: absolute;
+	bottom: 0;
+	width: 60px;
+	height: 40px;
+	background: #e0e0e0;
+	margin-left: 25%;
+	border-radius: 50%;
+  opacity: 0.9;
+}
+
+
+.downbead:nth-child(1){
+	bottom: 120px;
+
+}
+
+.downbead:nth-child(2){
+	bottom: 80px;
+
+}
+.downbead:nth-child(3){
+	bottom: 40px;
+
+}
+
+
+h1{
+  display:inline-block;
+  vertical-align: middle;
+
+}
+header{
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom:50px;
+}
+.pannel{
+  vertical-align: middle;
+  margin-left: 90px;
+  display:inline-block;
+  clear: both;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  button{
+    width: 110px;
+    height: 40px;
+    margin: 5px 0;
+    border: none;
+    outline: none;
+    background: white;
+    color: #24292e;
+    font-size: 15px;
+
+    transition: .5s;
+  }
+  button:hover{
+    background: #24292e;
+    color:white;
+    outline: 1px solid white;
+  }
+
+
+  #result{
+    display:inline-block;
+    position: absolute;
+    width:80px;
+    height: 30px;
+    line-height: 30px;
+    left: 150px;
+    bottom: 20px;
+    color: white;
+    font-size:1.9em;
+
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 2px #fefefe;
+  }
+}
