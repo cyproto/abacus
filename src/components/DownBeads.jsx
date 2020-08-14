@@ -1,6 +1,11 @@
 import React from 'react'
 
 export default class DownBeads extends React.Component {
+    constructor() {
+        super();
+        this.handledownClick = this.handledownClick.bind(this);
+    }
+
     handledownClick(e) {
         let count = e.target.getAttribute('data-index');
         let parent = e.target.parentNode;
@@ -11,7 +16,7 @@ export default class DownBeads extends React.Component {
                 this.props.nums[i] += 40;
                 parent.childNodes[i].style.transition = '.5s'
                 parent.childNodes[i].style.transform = 'translateY(-40px)'
-                parent.childNodes[i].style.background = 'white'
+                parent.childNodes[i].style.background = 'brown'
                 parent.childNodes[i].style.opacity = '1'
             }
         } else {
@@ -23,12 +28,13 @@ export default class DownBeads extends React.Component {
                     //??????????
                     // parent.childNodes[j].style.transition = '.5s'
                     parent.childNodes[j].style.transform = 'translateY(0px)'
-                    parent.childNodes[j].style.background = '#e0e0e0'
+                    parent.childNodes[j].style.background = 'rgb(211, 74, 74)'
                     parent.childNodes[j].style.opacity = '0.9'
                 }
                 val -= 40;
             }
         }
+        console.log(this.props.nums)
 
     }
 
@@ -36,8 +42,7 @@ export default class DownBeads extends React.Component {
         return (
             <div ref='dbs' className="down-beads-container">
                 {this.props.nums.map((item, index) => {
-
-                    return <div data-index={index} className="downbead" onClick={this.handledownClick.bind(this)} {...this.props}></div>
+                    return <div data-index={index} className="downbead" onClick={this.handledownClick}></div>
                 })}
                 <div className="down-vertical-pole"></div>
             </div>

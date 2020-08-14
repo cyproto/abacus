@@ -9,18 +9,35 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ups: [{ isUp: 0 }, { isUp: 0 }, { isUp: 0 }, { isUp: 0 }, { isUp: 0 }, { isUp: 0 }, { isUp: 0 }],
-      downs: [{ isDown: 1, nums: [120, 80, 40, 0] },
-      { isDown: 1, nums: [120, 80, 40, 0] },
-      { isDown: 1, nums: [120, 80, 40, 0] },
-      { isDown: 1, nums: [120, 80, 40, 0] },
-      { isDown: 1, nums: [120, 80, 40, 0] },
-      { isDown: 1, nums: [120, 80, 40, 0] },
-      { isDown: 1, nums: [120, 80, 40, 0] }
+      ups: [{ isUp: 0 }, { isUp: 0 }, { isUp: 0 }, { isUp: 0 },
+      { isUp: 0 }, { isUp: 0 }, { isUp: 0 }, { isUp: 0 },
+      { isUp: 0 }, { isUp: 0 }, { isUp: 0 }, { isUp: 0 },
+      { isUp: 0 }, { isUp: 0 }, { isUp: 0 }, { isUp: 0 },
+      { isUp: 0 }],
+      downs: [
+        { isDown: 1, nums: [120, 80, 40, 0] },
+        { isDown: 1, nums: [120, 80, 40, 0] },
+        { isDown: 1, nums: [120, 80, 40, 0] },
+        { isDown: 1, nums: [120, 80, 40, 0] },
+        { isDown: 1, nums: [120, 80, 40, 0] },
+        { isDown: 1, nums: [120, 80, 40, 0] },
+        { isDown: 1, nums: [120, 80, 40, 0] },
+        { isDown: 1, nums: [120, 80, 40, 0] },
+        { isDown: 1, nums: [120, 80, 40, 0] },
+        { isDown: 1, nums: [120, 80, 40, 0] },
+        { isDown: 1, nums: [120, 80, 40, 0] },
+        { isDown: 1, nums: [120, 80, 40, 0] },
+        { isDown: 1, nums: [120, 80, 40, 0] },
+        { isDown: 1, nums: [120, 80, 40, 0] },
+        { isDown: 1, nums: [120, 80, 40, 0] },
+        { isDown: 1, nums: [120, 80, 40, 0] },
+        { isDown: 1, nums: [120, 80, 40, 0] },
       ],
       clearAll: false,
-      units: ['1000000s', '100000s', '10000s', '1000s', '100s', '10s', '1s']
+      units: ['111111111.11111111', '11111111.11111111', '1111111.1111111', '111111.11111111', '11111.11111111', '1111.11111111', '111.11111111', '11.11111111', '1.11111111', '0.11111111', '0.01111111', '0.00111111', '0.00011111', '0.00001111', '0.00000111', '0.00000011', '0.00000001']
     }
+
+    this.showNum = this.showNum.bind(this)
   }
 
   showNum() {
@@ -51,7 +68,7 @@ class App extends Component {
     let array = Array.from(set);
     var weishu = array[array.length - 1] - array[0];
     var start = res[0][0];
-    for (let [index, item] of res.entries()) {
+    for (let [item] of res.entries()) {
       var weight = weishu - (item[0] - start);
       total += Math.pow(10, weight) * (parseInt(item[1]) + 1)
     }
@@ -71,18 +88,16 @@ class App extends Component {
     var up = document.getElementsByClassName('upbead');
     var down = document.getElementsByClassName('down-beads-container');
 
-    for (var i = 0; i < 7; i++) {
+    for (var i = 0; i < 17; i++) {
       up[i].style.transform = 'translateY(0px)';
-      up[i].style.background = '#e0e0e0'
+      up[i].style.background = 'rgb(211, 74, 74)'
       up[i].style.opacity = '0.9'
       var arr = down[i].getElementsByClassName('downbead')
       for (var j = 0; j < 4; j++) {
         arr[j].style.transform = 'translateY(0px)';
-        arr[j].style.background = '#e0e0e0'
+        arr[j].style.background = 'rgb(211, 74, 74)'
         arr[j].style.opacity = '0.9'
       }
-
-
     }
   }
 

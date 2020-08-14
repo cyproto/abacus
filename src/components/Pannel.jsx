@@ -10,12 +10,12 @@ class Panel extends Component {
         >
           Clear Abacus
         </button>
-        <button
+        {/* <button
           onClick={this.props.showNum}
           className="control show">
           Show Value
         </button>
-        <span id="result">total here</span>
+        <span id="result">total here</span> */}
       </div>
     );
   }

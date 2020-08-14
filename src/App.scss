@@ -1,5 +1,5 @@
 body{
-	background: #24292e;
+	background: #ffffff;
 	margin: 0;
 	padding: 0;
 	height: 100%;
@@ -11,7 +11,7 @@ ul,li{
 	padding:0;
 }
 h1,h3{
-  color: #fff;
+  color: rgb(0, 0, 0);
   text-align: center;
 }
 h1{
@@ -31,37 +31,38 @@ footer{
   width: 774px;
   height: 312px;
   box-shadow: 0px 0px 25px 15px #fff;
+  box-sizing: border-box;
 }
 .abacus-list{
 	margin: 0 auto;
 	height: 322px;
 	width: 774px;
-	position: relative;
 }
 
 .ab-item{
 	width: 110px;
 	height: 252px;
-	position: relative;
-	display: inline-block;
+  position: relative;
+  display: inline-block;
   .unit{
     position: absolute;
     width: 60px;
     height: 30px;
-    color: white;
+    color: rgb(0, 0, 0);
     right: 20px;
     top: -60px;
     text-align:center;
     line-height: 30px;
-    font-size: 1.5em;
+    font-size: 15px;
   }
 }
 
 .up-beads-container{
 	height: 100px;
 	width: 110px;
-	border-bottom: 5px solid #999;
-	overflow: hidden;
+	border-bottom: 3px solid rgb(0, 0, 0);
+  overflow: hidden;
+  border-style: solid;
 	position: relative;
 
 }
@@ -69,28 +70,32 @@ footer{
 .down-beads-container{
 	width: 110px;
 	height: 200px;
-	border-top: 3px solid #999;
-	overflow: hidden;
+	border-top: 3px solid rgb(0, 0, 0);
+  overflow: hidden;
+  border-style: solid;
 	position: relative;
 }
 
 .up-vertical-pole, .down-vertical-pole{
 
-	width: 5px;
-	height: 100px;
-	background: #999;
+	width: 1px;
+	height: 100%;
+  background: rgb(0, 0, 0);
+  border-style: solid;
 	margin: 0 auto;
 }
 
 .down-vertical-pole{
-	height: 205px;
+  height: 100%;
+  border-style: solid;
+  background: rgb(0, 0, 0);
 }
 
 .upbead{
-	width: 60px;
+	width: 55px;
 	height: 40px;
-	border-radius: 50%;
-	background: #e0e0e0;
+	border-radius: 55%;
+	background: rgb(211, 74, 74);
 	left: 25%;
 	top: 0;
 	position: absolute;
@@ -106,11 +111,11 @@ footer{
 .downbead{
 	position: absolute;
 	bottom: 0;
-	width: 60px;
+	width: 55px;
 	height: 40px;
-	background: #e0e0e0;
+	background: rgb(211, 74, 74);
 	margin-left: 25%;
-	border-radius: 50%;
+	border-radius: 55%;
   opacity: 0.9;
 }
 
@@ -126,7 +131,6 @@ footer{
 }
 .downbead:nth-child(3){
 	bottom: 40px;
-
 }
 
 
@@ -154,14 +158,14 @@ header{
     margin: 5px 0;
     border: none;
     outline: none;
-    background: white;
-    color: #24292e;
-    font-size: 15px;
-
+    border-radius: 5px;
+    background: rgb(9, 177, 255);
+    color: #ffffff;
+    font-size: 16px;
     transition: .5s;
   }
   button:hover{
-    background: #24292e;
+    background: #555555;
     color:white;
     outline: 1px solid white;
   }
