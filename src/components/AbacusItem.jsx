@@ -37,7 +37,7 @@ export default class AbacusItem extends React.Component {
     return (
 
       <li className="ab-item" >
-        <div className="unit" {...this.props.unit}>{this.props.unit}</div>
+        <div className="unit">{this.props.unit}</div>
         <div className="up-beads-container">
           <div className="up-vertical-pole"></div>
           <div ref="upbead" {...this.props} onClick={this.handleupClick} className="upbead"></div>
