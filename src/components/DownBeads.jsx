@@ -45,6 +45,7 @@ export default class DownBeads extends React.Component {
                     return <div data-index={index} className="downbead" onClick={this.handledownClick}></div>
                 })}
                 <div className="down-vertical-pole"></div>
+                <div className="down-vertical-pole-center-dot"></div>
             </div>
         )
     }

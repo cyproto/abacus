@@ -20,83 +20,67 @@ h1{
 footer{
   margin-top: 50px;
 }
-.container{
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-
-}
 .content{
-  width: 774px;
-  height: 312px;
   box-shadow: 0px 0px 25px 15px #fff;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 .abacus-list{
-	margin: 0 auto;
-	height: 322px;
-	width: 774px;
+  margin: 0 auto;
+  white-space: nowrap;
 }
 
 .ab-item{
-	width: 110px;
-	height: 252px;
-  position: relative;
-  display: inline-block;
+  display: inline-table;
   .unit{
-    position: absolute;
-    width: 60px;
-    height: 30px;
     color: rgb(0, 0, 0);
-    right: 20px;
-    top: -60px;
-    text-align:center;
-    line-height: 30px;
-    font-size: 15px;
+    font-size: 10px;
+    width: 5vw;
+    height: 50px;
+    word-wrap: break-word;
+    white-space: initial;
   }
 }
 
 .up-beads-container{
-	height: 100px;
-	width: 110px;
-	border-bottom: 3px solid rgb(0, 0, 0);
+	height: 70px;
+	width: 5vw;
   overflow: hidden;
   border-style: solid;
 	position: relative;
-
+  display: flex;
+  justify-content: center;
+  border-bottom-style: none;
 }
 
 .down-beads-container{
-	width: 110px;
-	height: 200px;
-	border-top: 3px solid rgb(0, 0, 0);
+	width: 5vw;
+	height: 150px;
   overflow: hidden;
   border-style: solid;
-	position: relative;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border-top-style: none;
 }
 
 .up-vertical-pole, .down-vertical-pole{
-
-	width: 1px;
-	height: 100%;
   background: rgb(0, 0, 0);
   border-style: solid;
 	margin: 0 auto;
 }
 
 .down-vertical-pole{
-  height: 100%;
   border-style: solid;
   background: rgb(0, 0, 0);
 }
 
 .upbead{
-	width: 55px;
-	height: 40px;
+	width: 30px;
+	height: 20px;
 	border-radius: 55%;
 	background: rgb(211, 74, 74);
-	left: 25%;
 	top: 0;
 	position: absolute;
 	display: block;
@@ -111,28 +95,42 @@ footer{
 .downbead{
 	position: absolute;
 	bottom: 0;
-	width: 55px;
-	height: 40px;
+	width: 30px;
+	height: 20px;
 	background: rgb(211, 74, 74);
-	margin-left: 25%;
 	border-radius: 55%;
   opacity: 0.9;
 }
 
 
 .downbead:nth-child(1){
-	bottom: 120px;
+	bottom: 60px;
 
 }
 
 .downbead:nth-child(2){
-	bottom: 80px;
+	bottom: 40px;
 
 }
 .downbead:nth-child(3){
-	bottom: 40px;
+	bottom: 20px;
 }
 
+.up-vertical-pole-center-dot {
+  height: 2vw;
+  background-color: white;
+ } 
+ 
+.ab-item:nth-child(9) {
+   .up-vertical-pole-center-dot {
+    align-self: center;
+    width: 2vw;
+    background-color: black;
+    border-radius: 50px;
+    border-bottom: 0;
+    margin-left: 1.85vw;
+   } 
+}
 
 h1{
   display:inline-block;
@@ -185,4 +183,69 @@ header{
     letter-spacing: 0.1em;
     text-shadow: 2px 2px 2px #fefefe;
   }
+}
+
+@media (max-width: 767px) {
+
+  
+  .abacus-list {
+  transform: rotate(90deg);
+  margin-top: 10vh;
+  margin-bottom: 50px;
+}
+.ab-item {
+  padding: 2px;
+  .unit{
+    font-size: 5px;
+    width: 5vw;
+    height: 50px;
+    word-wrap: break-word;
+    white-space: initial;
+  }
+}
+.downbead{
+	position: absolute;
+	bottom: 0;
+	width: 20px;
+	height: 15px;
+	background: rgb(211, 74, 74);
+	border-radius: 55%;
+  opacity: 0.9;
+}
+.upbead{
+	width: 20px;
+	height: 15px;
+	border-radius: 55%;
+	background: rgb(211, 74, 74);
+	top: 0;
+	position: absolute;
+	display: block;
+  opacity: 0.9;
+}
+.up-vertical-pole-center-dot {
+  height: 3vw;
+  margin-left: 2.50vw;
+ } 
+ 
+.ab-item:nth-child(9) {
+   .up-vertical-pole-center-dot {
+    width: 3vw;
+    height: 3vw;
+    background-color: black;
+    border-radius: 50px;
+    margin-left: 1.3vw;
+   } 
+}
+.downbead:nth-child(1){
+	bottom: 45px;
+
+}
+
+.downbead:nth-child(2){
+	bottom: 30px;
+
+}
+.downbead:nth-child(3){
+	bottom: 15px;
+}
 }

@@ -14,7 +14,7 @@ export default class AbacusItem extends React.Component {
 
     ReactDOM.findDOMNode(this.refs.upbead).style.transition = '.5s'
     if (this.props.up) {
-      ReactDOM.findDOMNode(this.refs.upbead).style.transform = 'translateY(60px)'
+      ReactDOM.findDOMNode(this.refs.upbead).style.transform = 'translateY(30px)'
       ReactDOM.findDOMNode(this.refs.upbead).style.background = 'brown'
       ReactDOM.findDOMNode(this.refs.upbead).style.opacity = '1'
     } else {
@@ -42,7 +42,7 @@ export default class AbacusItem extends React.Component {
           <div className="up-vertical-pole"></div>
           <div ref="upbead" {...this.props} onClick={this.handleupClick} className="upbead"></div>
         </div>
-
+        <div className="up-vertical-pole-center-dot"></div>
         <DownBeads {...this.props.down} />
       </li>
     )
