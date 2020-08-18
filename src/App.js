@@ -105,7 +105,6 @@ class App extends Component {
     return (
       <div>
         <header>
-          <h1>Abacus</h1>
           <Pannel recover={this.state} clearAll={this.clearAll} showNum={this.showNum} />
         </header>
         <div className="container">

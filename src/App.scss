@@ -150,28 +150,23 @@ header {
 }
 
 .pannel {
-  vertical-align: middle;
-  margin-left: 90px;
-  display:inline-block;
-  clear: both;
-  position: relative;
-  width: 100px;
-  height: 100px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
   button {
-    width: 110px;
     height: 40px;
-    margin: 5px 0;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    background: rgb(9, 177, 255);
+    width: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 50px;
+    background: rgb(211, 74, 74);
     color: #ffffff;
     font-size: 16px;
     transition: .5s;
   }
 
   button:hover {
-    background: #555555;
+    background: rgb(211, 74, 74);
     color:white;
     outline: 1px solid white;
   }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FaTrash } from 'react-icons/fa';
 
 class Panel extends Component {
   render() {
@@ -7,8 +8,7 @@ class Panel extends Component {
         <button
           {...this.props} onClick={this.props.clearAll}
           className="control clear"
-        >
-          Clear Abacus
+        ><FaTrash />
         </button>
         {/* <button
           onClick={this.props.showNum}
