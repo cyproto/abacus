@@ -10,12 +10,6 @@ class Panel extends Component {
           className="control clear"
         ><FaTrash />
         </button>
-        {/* <button
-          onClick={this.props.showNum}
-          className="control show">
-          Show Value
-        </button>
-        <span id="result">total here</span> */}
       </div>
     );
   }
