@@ -34,15 +34,13 @@ export default class DownBeads extends React.Component {
                 val -= 40;
             }
         }
-        console.log(this.props.nums)
-
     }
 
     render() {
         return (
             <div ref='dbs' className="down-beads-container">
                 {this.props.nums.map((item, index) => {
-                    return <div data-index={index} className="downbead" onClick={this.handledownClick}></div>
+                    return <div data-index={index} key={index.toString()} className="downbead" onClick={this.handledownClick}></div>
                 })}
                 <div className="down-vertical-pole"></div>
                 <div className="down-vertical-pole-center-dot"></div>

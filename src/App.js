@@ -74,7 +74,14 @@ class App extends Component {
           <div className="content">
             <ul className="abacus-list" >
               {this.state.ups.map((up, index) => {
-                return <AbacusItem ref='item' clearAll={this.state.clearAll} {...this.props} changeUpState={this.changeUpState.bind(this)} key={index} index={index} down={this.state.downs[index]} unit={this.state.units[index]} up={this.state.ups[index].isUp} />
+                return (
+                  <AbacusItem ref='item'
+                    clearAll={this.state.clearAll} {...this.props}
+                    changeUpState={this.changeUpState.bind(this)}
+                    key={index.toString()} index={index}
+                    down={this.state.downs[index]}
+                    unit={this.state.units[index]}
+                    up={this.state.ups[index].isUp} />)
               })}
             </ul>
           </div>
