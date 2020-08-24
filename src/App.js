@@ -34,7 +34,6 @@ class App extends Component {
         { isDown: 1, nums: [120, 80, 40, 0] },
       ],
       clearAll: false,
-      units: ['111111111.11111111', '11111111.11111111', '1111111.1111111', '111111.11111111', '11111.11111111', '1111.11111111', '111.11111111', '11.11111111', '1.11111111', '0.11111111', '0.01111111', '0.00111111', '0.00011111', '0.00001111', '0.00000111', '0.00000011', '0.00000001']
     }
   }
 
@@ -80,7 +79,6 @@ class App extends Component {
                     changeUpState={this.changeUpState.bind(this)}
                     key={index.toString()} index={index}
                     down={this.state.downs[index]}
-                    unit={this.state.units[index]}
                     up={this.state.ups[index].isUp} />)
               })}
             </ul>
