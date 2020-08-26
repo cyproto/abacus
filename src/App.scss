@@ -44,7 +44,7 @@ footer {
 
 .up-beads-container {
 	height: 60px;
-	width: 4vw;
+	width: 40px;
   overflow: hidden;
 	position: relative;
   display: flex;
@@ -53,8 +53,8 @@ footer {
 }
 
 .down-beads-container {
-	width: 4vw;
 	height: 130px;
+	width: 40px;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -68,15 +68,42 @@ footer {
 }
 
 .upbead {
-	width: 30px;
-	height: 20px;
-	border-radius: 55%;
-	background: rgb(211, 74, 74);
-	top: 0;
-	position: absolute;
-	display: block;
-  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
+
+.upbead-middle {
+	
+}
+
+.upbead-top {
+  position: absolute;
+  top: 0;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  border-bottom: 17px solid red;
+}
+
+.upbead-middle {
+  z-index: 5;
+  width: 32px;
+  top: 15px;
+  position: absolute;  
+  border: solid 2px #000;
+  border-color: #000 transparent #000 transparent;
+  border-radius: 100% 100% 100% 100%;
+  padding: 0;
+}
+
+.upbead-bottom {
+  position: absolute;
+  top: 17px;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  border-top: 17px solid red;
+}
+
 
 #source {
   color: #fff;
@@ -84,13 +111,12 @@ footer {
 }
 
 .downbead {
-	position: absolute;
-	bottom: 0;
-	width: 30px;
-	height: 20px;
-	background: rgb(211, 74, 74);
-	border-radius: 55%;
-  opacity: 0.9;
+  position: absolute;
+  bottom: 0;
+  border-bottom: 15px solid black;
+  border-top: 15px solid black;
+  border-left: 15px solid yellow;
+  border-right: 15px solid yellow;
 }
 
 
@@ -169,61 +195,61 @@ header {
   }
 }
 
-@media (max-width: 767px) {
-  .abacus-list {
-  transform: rotate(90deg);
-  margin-top: 10vh;
-  margin-bottom: 50px;
-}
+// @media (max-width: 767px) {
+//   .abacus-list {
+//   transform: rotate(90deg);
+//   margin-top: 10vh;
+//   margin-bottom: 50px;
+// }
 
 
-  .downbead {
-    position: absolute;
-    bottom: 0;
-    width: 20px;
-    height: 15px;
-    background: rgb(211, 74, 74);
-    border-radius: 55%;
-    opacity: 0.9;
-  }
+//   .downbead {
+//     position: absolute;
+//     bottom: 0;
+//     width: 20px;
+//     height: 15px;
+//     background: rgb(211, 74, 74);
+//     border-radius: 55%;
+//     opacity: 0.9;
+//   }
 
-  .upbead {
-    width: 20px;
-    height: 15px;
-    border-radius: 55%;
-    background: rgb(211, 74, 74);
-    top: 0;
-    position: absolute;
-    display: block;
-    opacity: 0.9;
-  }
+//   .upbead {
+//     width: 20px;
+//     height: 15px;
+//     border-radius: 55%;
+//     background: rgb(211, 74, 74);
+//     top: 0;
+//     position: absolute;
+//     display: block;
+//     opacity: 0.9;
+//   }
 
-  .up-vertical-pole-center-dot {
-    height: 3vw;
-    margin-left: 2.50vw;
-  } 
+//   .up-vertical-pole-center-dot {
+//     height: 3vw;
+//     margin-left: 2.50vw;
+//   } 
   
-  .ab-item:nth-child(9) {
-    .up-vertical-pole-center-dot {
-      width: 3vw;
-      height: 3vw;
-      background-color: black;
-      border-radius: 50px;
-      margin-left: 1.3vw;
-    } 
-  }
+//   .ab-item:nth-child(9) {
+//     .up-vertical-pole-center-dot {
+//       width: 3vw;
+//       height: 3vw;
+//       background-color: black;
+//       border-radius: 50px;
+//       margin-left: 1.3vw;
+//     } 
+//   }
 
-  .downbead:nth-child(1) {
-    bottom: 45px;
+//   .downbead:nth-child(1) {
+//     bottom: 45px;
 
-  }
+//   }
 
-  .downbead:nth-child(2) {
-    bottom: 30px;
+//   .downbead:nth-child(2) {
+//     bottom: 30px;
 
-  }
+//   }
 
-  .downbead:nth-child(3) {
-    bottom: 15px;
-  }
-}
+//   .downbead:nth-child(3) {
+//     bottom: 15px;
+//   }
+// }
