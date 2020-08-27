@@ -37,7 +37,11 @@ export default class AbacusItem extends React.Component {
           <div className="up-vertical-pole"></div>
           <BeadSvg ref="upbead" className="upbead" {...this.props} unit={this.props.unit} up={this.props.up.toString()} onClick={this.handleupClick} />
         </div>
-        <div className="up-vertical-pole-center-dot"></div>
+        <div className="up-vertical-pole-center-line">
+          <div className="up-vertical-pole-center-dot">
+
+          </div>
+        </div>
         <DownBeads {...this.props.down} />
       </li>
     )

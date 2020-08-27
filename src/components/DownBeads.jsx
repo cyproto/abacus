@@ -44,7 +44,6 @@ export default class DownBeads extends React.Component {
                     </div>)
                 })}
                 <div className="down-vertical-pole"></div>
-                <div className="down-vertical-pole-center-dot"></div>
             </div>
         )
     }
