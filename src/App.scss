@@ -43,7 +43,7 @@ footer {
 }
 
 .up-beads-container {
-	height: 60px;
+	height: 55px;
 	width: 40px;
   overflow: hidden;
 	position: relative;
@@ -67,42 +67,35 @@ footer {
   border-style: solid;
 }
 
-.upbead {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.upbead-middle {
-	
-}
-
-.upbead-top {
+svg {
   position: absolute;
-  top: 0;
-  border-left: 17px solid transparent;
-  border-right: 17px solid transparent;
-  border-bottom: 17px solid red;
-}
-
-.upbead-middle {
-  z-index: 5;
-  width: 32px;
   top: 15px;
-  position: absolute;  
-  border: solid 2px #000;
-  border-color: #000 transparent #000 transparent;
-  border-radius: 100% 100% 100% 100%;
-  padding: 0;
 }
 
-.upbead-bottom {
-  position: absolute;
-  top: 17px;
-  border-left: 17px solid transparent;
-  border-right: 17px solid transparent;
-  border-top: 17px solid red;
+.upbead {
+  top: -5px;
 }
+
+// .upbead::before {
+//   content: '';
+//   z-index: 1;
+//   position: absolute;
+//   top: -18px;
+//   border-left: 17px solid transparent;
+//   border-right: 17px solid transparent;
+//   border-bottom: 17px solid red;
+//   border-top: 0px solid transparent;
+// }
+
+// .upbead::after {
+//   content: '';
+//   z-index: 1;
+//   position: absolute;
+//   top: 1px;
+//   border-left: 17px solid transparent;
+//   border-right: 17px solid transparent;
+//   border-top: 17px solid red;
+// }
 
 
 #source {
@@ -112,21 +105,20 @@ footer {
 
 .downbead {
   position: absolute;
-  bottom: 0;
-  border-bottom: 15px solid black;
-  border-top: 15px solid black;
-  border-left: 15px solid yellow;
-  border-right: 15px solid yellow;
+  bottom: -5px;
+  width: 34px;
+  height: 34px;
+  background: url('./components/bead.svg');
 }
 
 
 .downbead:nth-child(1) {
-	bottom: 60px;
+	bottom: 70px;
 
 }
 
 .downbead:nth-child(2) {
-	bottom: 40px;
+	bottom: 45px;
 
 }
 

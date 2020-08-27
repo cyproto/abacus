@@ -52,13 +52,9 @@ class App extends Component {
 
     for (var i = 0; i < 17; i++) {
       up[i].style.transform = 'translateY(0px)';
-      up[i].style.background = 'rgb(211, 74, 74)'
-      up[i].style.opacity = '0.9'
       var arr = down[i].getElementsByClassName('downbead')
       for (var j = 0; j < 4; j++) {
         arr[j].style.transform = 'translateY(0px)';
-        arr[j].style.background = 'rgb(211, 74, 74)'
-        arr[j].style.opacity = '0.9'
       }
     }
   }
