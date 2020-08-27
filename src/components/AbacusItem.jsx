@@ -11,7 +11,6 @@ export default class AbacusItem extends React.Component {
 
   handleupClick() {
     //this.props.up = !this.props.up
-    this.props.changeUpState(this.props.index, !this.props.up)
 
     ReactDOM.findDOMNode(this.refs.upbead).style.transition = '.5s'
     if (this.props.up) {
@@ -19,6 +18,8 @@ export default class AbacusItem extends React.Component {
     } else {
       ReactDOM.findDOMNode(this.refs.upbead).style.transform = 'translateY(0px)'
     }
+
+    this.props.changeUpState(this.props.index, !this.props.up)
 
   }
 

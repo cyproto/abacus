@@ -67,6 +67,10 @@ class App extends Component {
         </header>
         <div className="container">
           <div className="content">
+            <div className="left-line"></div>
+            <div className="right-line"></div>
+            <div className="top-line"></div>
+            <div className="bottom-line"></div>
             <ul className="abacus-list" >
               {this.state.ups.map((up, index) => {
                 return (
