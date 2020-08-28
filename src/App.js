@@ -10,32 +10,33 @@ class App extends Component {
     super(props);
     this.abacusItemRef = React.createRef();
     this.state = {
-      ups: [{ isUp: 0 }, { isUp: 0 }, { isUp: 0 }, { isUp: 0 },
-      { isUp: 0 }, { isUp: 0 }, { isUp: 0 }, { isUp: 0 },
-      { isUp: 0 }, { isUp: 0 }, { isUp: 0 }, { isUp: 0 },
-      { isUp: 0 }, { isUp: 0 }, { isUp: 0 }, { isUp: 0 },
-      { isUp: 0 }],
+      ups: [{ isUp: true }, { isUp: true }, { isUp: true }, { isUp: true },
+      { isUp: true }, { isUp: true }, { isUp: true }, { isUp: true },
+      { isUp: true }, { isUp: true }, { isUp: true }, { isUp: true },
+      { isUp: true }, { isUp: true }, { isUp: 1 }, { isUp: true },
+      { isUp: true }],
       downs: [
-        { isDown: 1, nums: [120, 80, 40, 0] },
-        { isDown: 1, nums: [120, 80, 40, 0] },
-        { isDown: 1, nums: [120, 80, 40, 0] },
-        { isDown: 1, nums: [120, 80, 40, 0] },
-        { isDown: 1, nums: [120, 80, 40, 0] },
-        { isDown: 1, nums: [120, 80, 40, 0] },
-        { isDown: 1, nums: [120, 80, 40, 0] },
-        { isDown: 1, nums: [120, 80, 40, 0] },
-        { isDown: 1, nums: [120, 80, 40, 0] },
-        { isDown: 1, nums: [120, 80, 40, 0] },
-        { isDown: 1, nums: [120, 80, 40, 0] },
-        { isDown: 1, nums: [120, 80, 40, 0] },
-        { isDown: 1, nums: [120, 80, 40, 0] },
-        { isDown: 1, nums: [120, 80, 40, 0] },
-        { isDown: 1, nums: [120, 80, 40, 0] },
-        { isDown: 1, nums: [120, 80, 40, 0] },
-        { isDown: 1, nums: [120, 80, 40, 0] },
+        { isDown: true, nums: [120, 80, 40, 0] },
+        { isDown: true, nums: [120, 80, 40, 0] },
+        { isDown: true, nums: [120, 80, 40, 0] },
+        { isDown: true, nums: [120, 80, 40, 0] },
+        { isDown: true, nums: [120, 80, 40, 0] },
+        { isDown: true, nums: [120, 80, 40, 0] },
+        { isDown: true, nums: [120, 80, 40, 0] },
+        { isDown: true, nums: [120, 80, 40, 0] },
+        { isDown: true, nums: [120, 80, 40, 0] },
+        { isDown: true, nums: [120, 80, 40, 0] },
+        { isDown: true, nums: [120, 80, 40, 0] },
+        { isDown: true, nums: [120, 80, 40, 0] },
+        { isDown: true, nums: [120, 80, 40, 0] },
+        { isDown: true, nums: [120, 80, 40, 0] },
+        { isDown: true, nums: [120, 80, 40, 0] },
+        { isDown: true, nums: [120, 80, 40, 0] },
+        { isDown: true, nums: [120, 80, 40, 0] },
       ],
       clearAll: false,
     }
+    this.clearAll = this.clearAll.bind(this);
   }
 
   changeUpState(index, up) {
@@ -44,14 +45,18 @@ class App extends Component {
     this.setState({
       ups: a
     })
-    //alert(this.state.ups[index].isUp)
   }
 
   clearAll() {
     var up = document.getElementsByClassName('upbead');
-    var down = document.getElementsByClassName('down-beads-container');
-
+    var down = document.getElementsByClassName('down-beads-container');    
     for (var i = 0; i < 17; i++) {
+      let a = this.state.ups.slice();
+      a[i].isUp = true;
+      this.setState({
+        ups: a
+      });
+      this.state.ups[i] = { isUp: true };
       up[i].style.transform = 'translateY(0px)';
       var arr = down[i].getElementsByClassName('downbead')
       for (var j = 0; j < 4; j++) {
