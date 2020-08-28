@@ -6,17 +6,18 @@ import { ReactComponent as BeadSvg } from './bead.svg';
 export default class AbacusItem extends React.Component {
   constructor() {
     super();
+    this.upbeadRef = React.createRef();
     this.handleupClick = this.handleupClick.bind(this);
   }
 
   handleupClick() {
     //this.props.up = !this.props.up
 
-    ReactDOM.findDOMNode(this.refs.upbead).style.transition = '.5s'
+    ReactDOM.findDOMNode(this.upbeadRef.current).style.transition = '.5s'
     if (this.props.up) {
-      ReactDOM.findDOMNode(this.refs.upbead).style.transform = 'translateY(30px)'
+      ReactDOM.findDOMNode(this.upbeadRef.current).style.transform = 'translateY(30px)'
     } else {
-      ReactDOM.findDOMNode(this.refs.upbead).style.transform = 'translateY(0px)'
+      ReactDOM.findDOMNode(this.upbeadRef.current).style.transform = 'translateY(0px)'
     }
 
     this.props.changeUpState(this.props.index, !this.props.up)
@@ -25,7 +26,7 @@ export default class AbacusItem extends React.Component {
 
   clearUpBeads() {
 
-    React.findDOMNode(this.refs.upbead).style.transform = 'translateY(0px)'
+    React.findDOMNode(this.refs.current).style.transform = 'translateY(0px)'
   }
 
 
@@ -36,7 +37,7 @@ export default class AbacusItem extends React.Component {
         <div className="unit">{this.props.unit}</div>
         <div className="up-beads-container">
           <div className="up-vertical-pole"></div>
-          <BeadSvg ref="upbead" className="upbead" {...this.props} unit={this.props.unit} up={this.props.up.toString()} onClick={this.handleupClick} />
+          <BeadSvg ref={this.upbeadRef} className="upbead" {...this.props} unit={this.props.unit} up={this.props.up.toString()} onClick={this.handleupClick} />
         </div>
         <div className="up-vertical-pole-center-line">
           <div className="up-vertical-pole-center-dot">

@@ -8,6 +8,7 @@ import Pannel from "./components/Pannel";
 class App extends Component {
   constructor(props) {
     super(props);
+    this.abacusItemRef = React.createRef();
     this.state = {
       ups: [{ isUp: 0 }, { isUp: 0 }, { isUp: 0 }, { isUp: 0 },
       { isUp: 0 }, { isUp: 0 }, { isUp: 0 }, { isUp: 0 },
@@ -74,7 +75,7 @@ class App extends Component {
             <ul className="abacus-list" >
               {this.state.ups.map((up, index) => {
                 return (
-                  <AbacusItem ref='item'
+                  <AbacusItem ref={this.abacusItemRef}
                     clearAll={this.state.clearAll} {...this.props}
                     changeUpState={this.changeUpState.bind(this)}
                     key={index.toString()} index={index}
