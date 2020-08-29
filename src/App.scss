@@ -1,9 +1,10 @@
 body {
 	background: #ffffff;
-	margin: 0;
-	padding: 0;
 	height: 100%;
-	width: 100%;
+  width: 100%;
+  zoom: 150%;
+  display: grid;
+  place-items: center;
 }
 
 ul,li {
@@ -68,6 +69,7 @@ footer {
 
 .up-vertical-pole, .down-vertical-pole {
   border-style: solid;
+  border: 3px solid;
 }
 
 svg {
@@ -251,20 +253,22 @@ header {
   position: fixed;
   bottom: 10px;
   right: 10px;
+  display: grid;
+  place-items: center;
   button {
     height: 40px;
     width: 40px;
     display: grid;
     place-items: center;
     border-radius: 50px;
-    background: rgb(211, 74, 74);
+    background: #F2E401;
     color: #ffffff;
     font-size: 16px;
     transition: .5s;
   }
 
   button:hover {
-    background: rgb(211, 74, 74);
+    background: #F2E401;
     color:white;
     outline: 1px solid white;
   }
@@ -284,61 +288,120 @@ header {
   }
 }
 
-// @media (max-width: 767px) {
-//   .abacus-list {
-//   transform: rotate(90deg);
-//   margin-top: 10vh;
-//   margin-bottom: 50px;
-// }
+@media (max-width: 767px) {
+  body {
+    transform: rotate(90deg);
+    background: #ffffff;
+    zoom: 110%;
+    display: grid;
+    place-items: center;
+    padding: 0px 50px;
+  }
+  .content {
+    box-shadow: 0px 0px 25px 15px #fff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 221px;
+    width: 750px;
+  }
 
+  .up-beads-container {
+    height: 55px;
+    width: 32px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-bottom-style: none;
+  }
 
-//   .downbead {
-//     position: absolute;
-//     bottom: 0;
-//     width: 20px;
-//     height: 15px;
-//     background: rgb(211, 74, 74);
-//     border-radius: 55%;
-//     opacity: 0.9;
-//   }
-
-//   .upbead {
-//     width: 20px;
-//     height: 15px;
-//     border-radius: 55%;
-//     background: rgb(211, 74, 74);
-//     top: 0;
-//     position: absolute;
-//     display: block;
-//     opacity: 0.9;
-//   }
-
-//   .up-vertical-pole-center-dot {
-//     height: 3vw;
-//     margin-left: 2.50vw;
-//   } 
+  .down-beads-container {
+    height: 130px;
+    width: 32px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+  }
   
-//   .ab-item:nth-child(9) {
-//     .up-vertical-pole-center-dot {
-//       width: 3vw;
-//       height: 3vw;
-//       background-color: black;
-//       border-radius: 50px;
-//       margin-left: 1.3vw;
-//     } 
-//   }
+  .left-line {
+    position: absolute;
+    top: 35px;
+    left: 90px;
+    height: 150px;
+    width: 4px;
+    background-color: #4d4d4d;
+    border-radius: 5px;
+  }
 
-//   .downbead:nth-child(1) {
-//     bottom: 45px;
+  .top-line {
+    position: absolute;
+    top: 2px;
+    left: 130px;
+    height: 4px;
+    width: 490px;
+    background-color: #4d4d4d;
+    border-radius: 5px;
+  }
 
-//   }
+  .right-line {
+    position: absolute;
+    top: 35px;
+    right: 90px;
+    height: 150px;
+    width: 4px;
+    background-color: #4d4d4d;
+    border-radius: 5px;
+  }
 
-//   .downbead:nth-child(2) {
-//     bottom: 30px;
+  .bottom-line {
+    position: absolute;
+    bottom: 5px;
+    left: 130px;
+    height: 4px;
+    width: 490px;
+    background-color: #4d4d4d;
+    border-radius: 5px;
+  }
 
-//   }
-
-//   .downbead:nth-child(3) {
-//     bottom: 15px;
-//   }
-// }
+  .pannel {
+    position: fixed;
+    bottom: -80px;
+    right: -250px;
+    button {
+      height: 40px;
+      width: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 50px;
+      background: #F2E401;
+      color: #ffffff;
+      font-size: 16px;
+      transition: .5s;
+    }
+  
+    button:hover {
+      background: #F2E401;
+      color:white;
+      outline: 1px solid white;
+    }
+    
+    #result {
+      display: inline-block;
+      position: absolute;
+      width: 80px;
+      height: 30px;
+      line-height: 30px;
+      left: 150px;
+      bottom: 20px;
+      color: white;
+      font-size:1.9em;
+      letter-spacing: 0.1em;
+      text-shadow: 2px 2px 2px #fefefe;
+    }
+  }
+}

@@ -51,12 +51,11 @@ class App extends Component {
     var up = document.getElementsByClassName('upbead');
     var down = document.getElementsByClassName('down-beads-container');    
     for (var i = 0; i < 17; i++) {
-      let a = this.state.ups.slice();
-      a[i].isUp = true;
+      let ups = this.state.ups.slice();
+      ups[i].isUp = true;
       this.setState({
-        ups: a
+        ups: ups,
       });
-      this.state.ups[i] = { isUp: true };
       up[i].style.transform = 'translateY(0px)';
       var arr = down[i].getElementsByClassName('downbead')
       for (var j = 0; j < 4; j++) {
