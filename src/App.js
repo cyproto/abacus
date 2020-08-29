@@ -13,7 +13,7 @@ class App extends Component {
       ups: [{ isUp: true }, { isUp: true }, { isUp: true }, { isUp: true },
       { isUp: true }, { isUp: true }, { isUp: true }, { isUp: true },
       { isUp: true }, { isUp: true }, { isUp: true }, { isUp: true },
-      { isUp: true }, { isUp: true }, { isUp: 1 }, { isUp: true },
+      { isUp: true }, { isUp: true }, { isUp: true }, { isUp: true },
       { isUp: true }],
       downs: [
         { isDown: true, nums: [120, 80, 40, 0] },
