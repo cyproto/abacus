@@ -8,7 +8,7 @@ class Panel extends Component {
         <button
           {...this.props} onClick={this.props.clearAll}
           className="control clear"
-        ><FaTrash />
+        ><FaTrash className="trash-icon"/>
         </button>
       </div>
     );

@@ -5,6 +5,7 @@ body {
   zoom: 150%;
   display: grid;
   place-items: center;
+  position: absolute;
 }
 
 ul,li {
@@ -256,8 +257,8 @@ header {
   display: grid;
   place-items: center;
   button {
-    height: 40px;
-    width: 40px;
+    height: 42px;
+    width: 42px;
     display: grid;
     place-items: center;
     border-radius: 50px;
@@ -266,45 +267,30 @@ header {
     font-size: 16px;
     transition: .5s;
   }
-
-  button:hover {
-    background: #F2E401;
-    color:white;
-    outline: 1px solid white;
-  }
-  
-  #result {
-    display:inline-block;
-    position: absolute;
-    width:80px;
-    height: 30px;
-    line-height: 30px;
-    left: 150px;
-    bottom: 20px;
-    color: white;
-    font-size:1.9em;
-    letter-spacing: 0.1em;
-    text-shadow: 2px 2px 2px #fefefe;
+  .trash-icon {
+    
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 700px) {
   body {
     transform: rotate(90deg);
     background: #ffffff;
-    zoom: 110%;
     display: grid;
     place-items: center;
-    padding: 0px 50px;
+    top: 5%;
+    left: 50%;
+    position: absolute;
   }
   .content {
+    zoom: 135%;
     box-shadow: 0px 0px 25px 15px #fff;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     position: relative;
     height: 221px;
-    width: 750px;
+    width: 450px;
   }
 
   .up-beads-container {
@@ -331,7 +317,7 @@ header {
   .left-line {
     position: absolute;
     top: 35px;
-    left: 90px;
+    left: -55px;
     height: 150px;
     width: 4px;
     background-color: #4d4d4d;
@@ -341,7 +327,7 @@ header {
   .top-line {
     position: absolute;
     top: 2px;
-    left: 130px;
+    left: -25px;
     height: 4px;
     width: 490px;
     background-color: #4d4d4d;
@@ -351,7 +337,7 @@ header {
   .right-line {
     position: absolute;
     top: 35px;
-    right: 90px;
+    right: -55px;
     height: 150px;
     width: 4px;
     background-color: #4d4d4d;
@@ -361,7 +347,7 @@ header {
   .bottom-line {
     position: absolute;
     bottom: 5px;
-    left: 130px;
+    left: -25px;
     height: 4px;
     width: 490px;
     background-color: #4d4d4d;
@@ -369,12 +355,12 @@ header {
   }
 
   .pannel {
-    position: fixed;
-    bottom: -80px;
-    right: -250px;
+    position: absolute;
+    bottom: -45px;
+    left: 290px;
     button {
-      height: 40px;
-      width: 40px;
+      height: 42px;
+      width: 42px;
       display: grid;
       place-items: center;
       border-radius: 50px;
@@ -382,6 +368,10 @@ header {
       color: #ffffff;
       font-size: 16px;
       transition: .5s;
+    }
+    .trash-icon {
+      position: absolute;
+      margin-left: 40px;
     }
   
     button:hover {
