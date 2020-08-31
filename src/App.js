@@ -56,6 +56,15 @@ class App extends Component {
       this.setState({
         ups: ups,
       });
+      let downs = this.state.downs.slice();
+      downs[i].isDown = true;
+      this.setState({
+        downs: downs,
+      });
+      downs[i].nums[0] = 120;
+      downs[i].nums[1] = 80;
+      downs[i].nums[2] = 40;
+      downs[i].nums[3] = 0;
       up[i].style.transform = 'translateY(0px)';
       var arr = down[i].getElementsByClassName('downbead')
       for (var j = 0; j < 4; j++) {

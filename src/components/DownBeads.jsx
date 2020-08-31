@@ -25,8 +25,6 @@ export default class DownBeads extends React.Component {
             for (var j = count; j < 4; j++) {
                 if (this.props.nums[j] !== val) {
                     this.props.nums[j] = val;
-                    //??????????
-                    // parent.childNodes[j].style.transition = '.5s'
                     parent.childNodes[j].style.transform = 'translateY(0px)'
                 }
                 val -= 40;
