@@ -69,8 +69,7 @@ footer {
 }
 
 .up-vertical-pole, .down-vertical-pole {
-  border-style: solid;
-  border: 3px solid;
+  border: 2.5px solid black;
 }
 
 svg {
@@ -81,27 +80,6 @@ svg {
 .upbead {
   top: -5px;
 }
-
-// .upbead::before {
-//   content: '';
-//   z-index: 1;
-//   position: absolute;
-//   top: -18px;
-//   border-left: 17px solid transparent;
-//   border-right: 17px solid transparent;
-//   border-bottom: 17px solid red;
-//   border-top: 0px solid transparent;
-// }
-
-// .upbead::after {
-//   content: '';
-//   z-index: 1;
-//   position: absolute;
-//   top: 1px;
-//   border-left: 17px solid transparent;
-//   border-right: 17px solid transparent;
-//   border-top: 17px solid red;
-// }
 
 
 #source {
@@ -117,15 +95,12 @@ svg {
   background: url('./components/bead.svg');
 }
 
-
 .downbead:nth-child(1) {
 	bottom: 70px;
-
 }
 
 .downbead:nth-child(2) {
 	bottom: 45px;
-
 }
 
 .downbead:nth-child(3) {
@@ -143,9 +118,9 @@ svg {
   .up-vertical-pole-center-line {
     .up-vertical-pole-center-dot {
       z-index: 15;
-      height: 10px;
-      width: 10px;
-      border-radius: 10px;
+      height: 12px;
+      width: 12px;
+      border-radius: 12px;
       background-color: white;
     } 
   }
@@ -155,9 +130,9 @@ svg {
   .up-vertical-pole-center-line {
     .up-vertical-pole-center-dot {
       z-index: 15;
-      height: 10px;
-      width: 10px;
-      border-radius: 10px;
+      height: 12px;
+      width: 12px;
+      border-radius: 12px;
       background-color: white;
     } 
   }
@@ -167,9 +142,9 @@ svg {
   .up-vertical-pole-center-line {
     .up-vertical-pole-center-dot {
       z-index: 15;
-      height: 10px;
-      width: 10px;
-      border-radius: 10px;
+      height: 12px;
+      width: 12px;
+      border-radius: 12px;
       background-color: white;
     } 
   }
@@ -179,9 +154,9 @@ svg {
   .up-vertical-pole-center-line {
     .up-vertical-pole-center-dot {
       z-index: 15;
-      height: 10px;
-      width: 10px;
-      border-radius: 10px;
+      height: 12px;
+      width: 12px;
+      border-radius: 12px;
       background-color: white;
     } 
   }
@@ -191,9 +166,9 @@ svg {
   .up-vertical-pole-center-line {
     .up-vertical-pole-center-dot {
       z-index: 15;
-      height: 10px;
-      width: 10px;
-      border-radius: 10px;
+      height: 12px;
+      width: 12px;
+      border-radius: 12px;
       background-color: white;
     } 
   }
@@ -263,7 +238,7 @@ header {
     place-items: center;
     border-radius: 50px;
     background: #F2E401;
-    color: #ffffff;
+    color: #000000;
     font-size: 16px;
     transition: .5s;
   }
@@ -282,6 +257,7 @@ header {
     left: 50%;
     position: absolute;
   }
+
   .content {
     zoom: 135%;
     box-shadow: 0px 0px 25px 15px #fff;
@@ -355,9 +331,10 @@ header {
   }
 
   .pannel {
+    z-index: 100;
     position: absolute;
-    bottom: -45px;
-    left: 290px;
+    bottom: -10px;
+    left: 282px;
     button {
       height: 42px;
       width: 42px;
@@ -365,13 +342,14 @@ header {
       place-items: center;
       border-radius: 50px;
       background: #F2E401;
-      color: #ffffff;
+      color: #000000;
       font-size: 16px;
       transition: .5s;
     }
+
     .trash-icon {
       position: absolute;
-      margin-left: 40px;
+      margin-left: 42px;
     }
   
     button:hover {
