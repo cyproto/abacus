@@ -32,7 +32,7 @@ footer {
   display: flex;
   justify-content: center;
   position: relative;
-  height: 221px;
+  height: 227px;
   width: 750px;
 }
 
@@ -58,7 +58,7 @@ footer {
 }
 
 .down-beads-container {
-	height: 130px;
+	height: 136px;
 	width: 40px;
   overflow: hidden;
   position: relative;
@@ -90,21 +90,21 @@ svg {
 .downbead {
   position: absolute;
   bottom: -5px;
-  width: 34px;
-  height: 34px;
+  width: 35px;
+  height: 35px;
   background: url('./components/bead.svg');
 }
 
 .downbead:nth-child(1) {
-	bottom: 70px;
+	bottom: 74px;
 }
 
 .downbead:nth-child(2) {
-	bottom: 45px;
+	bottom: 47px;
 }
 
 .downbead:nth-child(3) {
-	bottom: 20px;
+	bottom: 21px;
 }
 
 .up-vertical-pole-center-line {
@@ -237,13 +237,10 @@ header {
     display: grid;
     place-items: center;
     border-radius: 50px;
-    background: #F2E401;
-    color: #000000;
+    background: #603813;
+    color: #ffffff;
     font-size: 16px;
     transition: .5s;
-  }
-  .trash-icon {
-    
   }
 }
 
@@ -260,12 +257,12 @@ header {
 
   .content {
     zoom: 135%;
-    box-shadow: 0px 0px 25px 15px #fff;
+    margin-left: 5px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     position: relative;
-    height: 221px;
+    height: 227px;
     width: 450px;
   }
 
@@ -280,20 +277,20 @@ header {
   }
 
   .down-beads-container {
-    height: 130px;
+    height: 136px;
     width: 32px;
     overflow: hidden;
     position: relative;
     display: flex;
     justify-content: center;
-    margin: 0px;
+    margin: 0px 0.5px;
     padding: 0px;
   }
   
   .left-line {
     position: absolute;
     top: 35px;
-    left: -55px;
+    left: -65px;
     height: 150px;
     width: 4px;
     background-color: #4d4d4d;
@@ -303,7 +300,7 @@ header {
   .top-line {
     position: absolute;
     top: 2px;
-    left: -25px;
+    left: -20px;
     height: 4px;
     width: 490px;
     background-color: #4d4d4d;
@@ -313,7 +310,7 @@ header {
   .right-line {
     position: absolute;
     top: 35px;
-    right: -55px;
+    right: -65px;
     height: 150px;
     width: 4px;
     background-color: #4d4d4d;
@@ -323,7 +320,7 @@ header {
   .bottom-line {
     position: absolute;
     bottom: 5px;
-    left: -25px;
+    left: -20px;
     height: 4px;
     width: 490px;
     background-color: #4d4d4d;
@@ -333,16 +330,16 @@ header {
   .pannel {
     z-index: 100;
     position: absolute;
-    bottom: -10px;
-    left: 282px;
+    bottom: -15px;
+    left: 289px;
     button {
       height: 42px;
       width: 42px;
       display: grid;
       place-items: center;
       border-radius: 50px;
-      background: #F2E401;
-      color: #000000;
+      background: #603813;
+      color: #ffffff;
       font-size: 16px;
       transition: .5s;
     }
@@ -350,12 +347,6 @@ header {
     .trash-icon {
       position: absolute;
       margin-left: 42px;
-    }
-  
-    button:hover {
-      background: #F2E401;
-      color:white;
-      outline: 1px solid white;
     }
     
     #result {
