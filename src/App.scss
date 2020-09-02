@@ -9,8 +9,8 @@ body {
 }
 
 ul,li {
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 }
 
 h1,h3 {
@@ -32,7 +32,7 @@ footer {
   display: flex;
   justify-content: center;
   position: relative;
-  height: 227px;
+  height: 232px;
   width: 750px;
 }
 
@@ -48,7 +48,7 @@ footer {
 }
 
 .up-beads-container {
-	height: 55px;
+	height: 57px;
 	width: 40px;
   overflow: hidden;
 	position: relative;
@@ -58,7 +58,7 @@ footer {
 }
 
 .down-beads-container {
-	height: 136px;
+	height: 139px;
 	width: 40px;
   overflow: hidden;
   position: relative;
@@ -70,6 +70,7 @@ footer {
 
 .up-vertical-pole, .down-vertical-pole {
   border: 2.5px solid black;
+  background-color: black;
 }
 
 svg {
@@ -78,7 +79,7 @@ svg {
 }
 
 .upbead {
-  top: -5px;
+  top: -4px;
 }
 
 
@@ -89,22 +90,22 @@ svg {
 
 .downbead {
   position: absolute;
-  bottom: -5px;
+  bottom: -4px;
   width: 35px;
   height: 35px;
   background: url('./components/bead.svg');
 }
 
 .downbead:nth-child(1) {
-	bottom: 74px;
+	bottom: 78px;
 }
 
 .downbead:nth-child(2) {
-	bottom: 47px;
+	bottom: 50.5px;
 }
 
 .downbead:nth-child(3) {
-	bottom: 21px;
+	bottom: 23.5px;
 }
 
 .up-vertical-pole-center-line {
@@ -262,12 +263,32 @@ header {
     display: flex;
     justify-content: center;
     position: relative;
-    height: 227px;
+    height: 233px;
     width: 450px;
   }
 
+  .downbead {
+    position: absolute;
+    bottom: -4px;
+    width: 35px;
+    height: 35px;
+    background: url('./components/bead.svg');
+  }
+  
+  .downbead:nth-child(1) {
+    bottom: 78.5px;
+  }
+  
+  .downbead:nth-child(2) {
+    bottom: 51px;
+  }
+  
+  .downbead:nth-child(3) {
+    bottom: 23.5px;
+  }
+
   .up-beads-container {
-    height: 55px;
+    height: 57px;
     width: 32px;
     overflow: hidden;
     position: relative;
@@ -277,7 +298,7 @@ header {
   }
 
   .down-beads-container {
-    height: 136px;
+    height: 140px;
     width: 32px;
     overflow: hidden;
     position: relative;
