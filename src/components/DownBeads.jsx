@@ -1,5 +1,4 @@
 import React from 'react'
-import bead from './bead.svg';
 
 export default class DownBeads extends React.Component {
     constructor() {
@@ -16,7 +15,7 @@ export default class DownBeads extends React.Component {
         if (flag) {
             for (var i = 0; i <= count; i++) {
                 this.props.nums[i] += 40;
-                parent.childNodes[i].style.transition = '.5s'
+                parent.childNodes[i].style.transition = '0.7s'
                 parent.childNodes[i].style.transform = 'translateY(-30px)'
             }
         } else {

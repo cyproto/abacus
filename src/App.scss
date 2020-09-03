@@ -227,9 +227,10 @@ header {
 }
 
 .pannel {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
+  position: absolute;
+  top: 250px;
+  right: 30px;
+  z-index: 10;
   display: grid;
   place-items: center;
   button {
@@ -242,6 +243,9 @@ header {
     color: #ffffff;
     font-size: 16px;
     transition: .5s;
+  }
+  .trash-icon {
+    position: absolute;
   }
 }
 
@@ -258,7 +262,7 @@ header {
 
   .content {
     zoom: 135%;
-    margin-left: 5px;
+    margin-left: 7px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -349,39 +353,18 @@ header {
   }
 
   .pannel {
-    z-index: 100;
+    z-index: 10;
     position: absolute;
-    bottom: -15px;
-    left: 289px;
+    top: 240px;
+    right: -60px;
     button {
-      height: 42px;
-      width: 42px;
-      display: grid;
-      place-items: center;
+      height: 40px;
+      width: 40px;
       border-radius: 50px;
       background: #603813;
       color: #ffffff;
       font-size: 16px;
       transition: .5s;
-    }
-
-    .trash-icon {
-      position: absolute;
-      margin-left: 42px;
-    }
-    
-    #result {
-      display: inline-block;
-      position: absolute;
-      width: 80px;
-      height: 30px;
-      line-height: 30px;
-      left: 150px;
-      bottom: 20px;
-      color: white;
-      font-size:1.9em;
-      letter-spacing: 0.1em;
-      text-shadow: 2px 2px 2px #fefefe;
-    }
+    } 
   }
 }

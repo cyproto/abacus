@@ -47,9 +47,16 @@ class App extends Component {
     })
   }
 
-  clearAll() {
+  async clearAll() {
     var up = document.getElementsByClassName('upbead');
-    var down = document.getElementsByClassName('down-beads-container');    
+    var down = document.getElementsByClassName('down-beads-container');
+    var clearButton = document.getElementsByClassName('clear');
+    var clearButtonIcon = document.getElementsByClassName('trash-icon');
+    clearButtonIcon[0].style.position = 'fixed';
+    clearButtonIcon[0].style.top = '12px';
+    clearButton[0].style.transition = '.5s';
+    clearButton[0].style.transform = 'translateX(-350px)';
+    clearButton[0].style.opacity = '0';
     for (var i = 0; i < 17; i++) {
       let ups = this.state.ups.slice();
       ups[i].isUp = true;
@@ -71,16 +78,24 @@ class App extends Component {
         arr[j].style.transform = 'translateY(0px)';
       }
     }
+    setTimeout(function () {
+      clearButton[0].style.transition = '0s';
+      clearButton[0].style.transform = 'translateX(0px)';
+      setTimeout(function () {
+        clearButton[0].style.transition = '0.2s';
+        clearButton[0].style.opacity = '1';
+      }, 300)
+    }, 1000);
   }
 
   render() {
     return (
       <div>
         <header>
-          <Pannel recover={this.state} clearAll={this.clearAll} />
         </header>
         <div className="container">
           <div className="content">
+            <Pannel recover={this.state} clearAll={this.clearAll} />
             <div className="left-line"></div>
             <div className="right-line"></div>
             <div className="top-line"></div>
