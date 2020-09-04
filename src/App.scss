@@ -33,13 +33,15 @@ footer {
   justify-content: center;
   position: relative;
   height: 232px;
-  width: 750px;
+  width: 700px;
+  border: solid black 12px;
+  border-radius: 25px;
 }
 
 .abacus-list {
-  margin: 0 auto;
-  border: solid black 12px;
-  border-radius: 25px;
+  margin: 0px;
+  padding: 0px;
+  
   white-space: nowrap;
 }
 
@@ -111,6 +113,7 @@ svg {
 .up-vertical-pole-center-line {
   height: 12px;
   background-color: black;
+  color: black;
   display: flex;
   justify-content: center;
 }
@@ -177,8 +180,8 @@ svg {
 
 .left-line {
   position: absolute;
-  top: 35px;
-  left: 29px;
+  top: 30px;
+  left: -8px;
   height: 150px;
   width: 4px;
   background-color: #4d4d4d;
@@ -187,8 +190,8 @@ svg {
 
 .top-line {
   position: absolute;
-  top: 2px;
-  left: 80px;
+  top: -8px;
+  left: 40px;
   height: 4px;
   width: 590px;
   background-color: #4d4d4d;
@@ -197,8 +200,8 @@ svg {
 
 .right-line {
   position: absolute;
-  top: 35px;
-  right: 29px;
+  top: 30px;
+  right: -8px;
   height: 150px;
   width: 4px;
   background-color: #4d4d4d;
@@ -207,8 +210,8 @@ svg {
 
 .bottom-line {
   position: absolute;
-  bottom: 5px;
-  left: 80px;
+  bottom: -8px;
+  left: 40px;
   height: 4px;
   width: 590px;
   background-color: #4d4d4d;
@@ -228,8 +231,8 @@ header {
 
 .pannel {
   position: absolute;
-  top: 250px;
-  right: 30px;
+  top: 230px;
+  right: 0px;
   z-index: 10;
   display: grid;
   place-items: center;
@@ -255,20 +258,23 @@ header {
     background: #ffffff;
     display: grid;
     place-items: center;
-    top: 5%;
+    top: -50px;
     left: 50%;
     position: absolute;
   }
 
   .content {
     zoom: 135%;
-    margin-left: 7px;
+    box-shadow: 0px 0px 25px 15px #fff;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     position: relative;
-    height: 233px;
-    width: 450px;
+    height: 232.5px;
+    width: 586px;
+    border: solid black 12px;
+    border-radius: 25px;
+    margin-right: 10px;
   }
 
   .downbead {
@@ -315,7 +321,7 @@ header {
   .left-line {
     position: absolute;
     top: 35px;
-    left: -65px;
+    left: -8px;
     height: 150px;
     width: 4px;
     background-color: #4d4d4d;
@@ -324,8 +330,8 @@ header {
 
   .top-line {
     position: absolute;
-    top: 2px;
-    left: -20px;
+    top: -8px;
+    left: 35px;
     height: 4px;
     width: 490px;
     background-color: #4d4d4d;
@@ -335,7 +341,7 @@ header {
   .right-line {
     position: absolute;
     top: 35px;
-    right: -65px;
+    right: -8px;
     height: 150px;
     width: 4px;
     background-color: #4d4d4d;
@@ -344,8 +350,8 @@ header {
 
   .bottom-line {
     position: absolute;
-    bottom: 5px;
-    left: -20px;
+    bottom: -8px;
+    left: 35px;
     height: 4px;
     width: 490px;
     background-color: #4d4d4d;
@@ -355,8 +361,8 @@ header {
   .pannel {
     z-index: 10;
     position: absolute;
-    top: 240px;
-    right: -60px;
+    top: 230px;
+    right: 0px;
     button {
       height: 40px;
       width: 40px;
