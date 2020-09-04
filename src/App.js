@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import InvertedItalianHand from './1599230976526.png';
 import './App.scss';
 
 //@Components
@@ -52,10 +53,27 @@ class App extends Component {
     var down = document.getElementsByClassName('down-beads-container');
     var clearButton = document.getElementsByClassName('clear');
     var clearButtonIcon = document.getElementsByClassName('trash-icon');
+    var invertedItalianHand = document.getElementsByClassName('inverted-italian-hand');
+
+    clearButton[0].disabled = true;
+    clearButtonIcon[0].disabled = true;
+    
+    invertedItalianHand[0].style.visibility = 'visible';
+    invertedItalianHand[0].style.transition = '1s';
+    if(window.outerWidth < 630) {
+      invertedItalianHand[0].style.transform = 'translateX(-360px)';
+    } else {
+      invertedItalianHand[0].style.transform = 'translateX(-475px)';
+    }
+
+    setTimeout(function () {
+      invertedItalianHand[0].style.visibility = 'hidden';
+    }, 500)
+
+    
     clearButtonIcon[0].style.position = 'fixed';
     clearButtonIcon[0].style.top = '12px';
     clearButton[0].style.transition = '.5s';
-    clearButton[0].style.transform = 'translateX(-350px)';
     clearButton[0].style.opacity = '0';
     for (var i = 0; i < 17; i++) {
       let ups = this.state.ups.slice();
@@ -81,7 +99,10 @@ class App extends Component {
     setTimeout(function () {
       clearButton[0].style.transition = '0s';
       clearButton[0].style.transform = 'translateX(0px)';
+      clearButton[0].disabled = false;
+      clearButtonIcon[0].disabled = false;
       setTimeout(function () {
+        invertedItalianHand[0].style.transform = 'translateX(40px)';
         clearButton[0].style.transition = '0.2s';
         clearButton[0].style.opacity = '1';
       }, 300)
@@ -100,6 +121,7 @@ class App extends Component {
             <div className="right-line"></div>
             <div className="top-line"></div>
             <div className="bottom-line"></div>
+            <img className="inverted-italian-hand" src={InvertedItalianHand}></img>
             <ul className="abacus-list" >
               {this.state.ups.map((up, index) => {
                 return (
