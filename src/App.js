@@ -48,6 +48,17 @@ class App extends Component {
     })
   }
 
+  animateClearBeads(up, down, i, timer) {
+    setTimeout(function () {
+      up[i].style.transform = 'translateY(0px)';
+      var arr = down[i].getElementsByClassName('downbead')
+      for (var j = 0; j < 4; j++) {
+        arr[j].style.transform = 'translateY(0px)';
+      }
+    }, timer + 60);
+    return timer + 60;
+  }
+
   async clearAll() {
     var up = document.getElementsByClassName('upbead');
     var down = document.getElementsByClassName('down-beads-container');
@@ -57,10 +68,10 @@ class App extends Component {
 
     clearButton[0].disabled = true;
     clearButtonIcon[0].disabled = true;
-    
+
     invertedItalianHand[0].style.visibility = 'visible';
-    invertedItalianHand[0].style.transition = '1s';
-    if(window.outerWidth < 630) {
+    invertedItalianHand[0].style.transition = '2s';
+    if (window.outerWidth < 630) {
       invertedItalianHand[0].style.transform = 'translateX(-360px)';
     } else {
       invertedItalianHand[0].style.transform = 'translateX(-475px)';
@@ -68,14 +79,15 @@ class App extends Component {
 
     setTimeout(function () {
       invertedItalianHand[0].style.visibility = 'hidden';
-    }, 500)
+    }, 700)
 
-    
+
     clearButtonIcon[0].style.position = 'fixed';
     clearButtonIcon[0].style.top = '12px';
     clearButton[0].style.transition = '.5s';
     clearButton[0].style.opacity = '0';
-    for (var i = 0; i < 17; i++) {
+    var timer = 0;
+    for (var i = this.state.ups.length - 1; i >= 0; i--) {
       let ups = this.state.ups.slice();
       ups[i].isUp = true;
       this.setState({
@@ -90,11 +102,7 @@ class App extends Component {
       downs[i].nums[1] = 80;
       downs[i].nums[2] = 40;
       downs[i].nums[3] = 0;
-      up[i].style.transform = 'translateY(0px)';
-      var arr = down[i].getElementsByClassName('downbead')
-      for (var j = 0; j < 4; j++) {
-        arr[j].style.transform = 'translateY(0px)';
-      }
+      timer = this.animateClearBeads(up, down, i, timer);
     }
     setTimeout(function () {
       clearButton[0].style.transition = '0s';
@@ -105,9 +113,11 @@ class App extends Component {
         invertedItalianHand[0].style.transform = 'translateX(40px)';
         clearButton[0].style.transition = '0.2s';
         clearButton[0].style.opacity = '1';
-      }, 300)
-    }, 1000);
+      }, 500)
+    }, 2000);
   }
+
+  
 
   render() {
     return (
