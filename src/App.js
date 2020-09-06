@@ -84,9 +84,6 @@ class App extends Component {
       clearButtonIcon[0].disabled = false;
     }, 1500)
 
-
-    clearButtonIcon[0].style.position = 'fixed';
-    clearButtonIcon[0].style.top = '12px';
     clearButton[0].style.transition = '.5s';
     clearButton[0].style.opacity = '0';
     var timer = 0;

@@ -280,10 +280,14 @@ header {
     -o-transition: .5s;
     transition: .5s;
   }
-  .trash-icon {
-    position: relative;
-    top: auto;
-  }
+}
+
+.trash-icon {
+  position: relative;
+  top: -5px;
+  left: -20px;
+  height: 35px;
+  width: 47px;
 }
 
 .inverted-italian-hand {
@@ -484,9 +488,12 @@ header {
       -o-transition: .5s;
       transition: .5s;
     }
-    .trash-icon {
-      position: relative;
-      top: auto;
-    }
+  }
+  .trash-icon {
+    position: relative;
+    top: -5px;
+    left: -25px;
+    height: 35px;
+    width: 50px;
   }
 }

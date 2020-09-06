@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FaTrash } from 'react-icons/fa';
+import InvertedItalianHand from '../1599230976526.png';
 
 class Panel extends Component {
   render() {
@@ -8,7 +9,7 @@ class Panel extends Component {
         <button
           {...this.props} onClick={this.props.clearAll}
           className="control clear"
-        ><FaTrash className="trash-icon"/>
+        ><img src={InvertedItalianHand} className="trash-icon" onClick={this.props.clearAll} />
         </button>
       </div>
     );
