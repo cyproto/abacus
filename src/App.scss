@@ -287,14 +287,13 @@ header {
 .inverted-italian-hand {
   z-index: 20;
   position: absolute;
-  display: block;
   background-size: cover;
   background-position: top center;
-  height: 220px;
+  overflow: hidden;
+  height: 0px;
   width: 400px;
   top: -40px;
-  right: 0px;
-  visibility: hidden;
+  right: -200px;
 }
 
 @media (max-width: 700px) {

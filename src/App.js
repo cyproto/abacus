@@ -55,7 +55,7 @@ class App extends Component {
       for (var j = 0; j < 4; j++) {
         arr[j].style.transform = 'translateY(0px)';
       }
-    }, timer + 60);
+    }, timer);
     return timer + 60;
   }
 
@@ -68,18 +68,21 @@ class App extends Component {
 
     clearButton[0].disabled = true;
     clearButtonIcon[0].disabled = true;
-
+    invertedItalianHand[0].style.height = '220px';
+    invertedItalianHand[0].style.opacity = '1';
     invertedItalianHand[0].style.visibility = 'visible';
-    invertedItalianHand[0].style.transition = '2s';
+    invertedItalianHand[0].style.transition = '1s linear, height 0s, visibility 0s';
     if (window.outerWidth < 630) {
-      invertedItalianHand[0].style.transform = 'translateX(-360px)';
+      invertedItalianHand[0].style.transform = 'translateX(-560px)';
     } else {
-      invertedItalianHand[0].style.transform = 'translateX(-475px)';
+      invertedItalianHand[0].style.transform = 'translateX(-675px)';
     }
 
     setTimeout(function () {
-      invertedItalianHand[0].style.visibility = 'hidden';
-    }, 700)
+      invertedItalianHand[0].style.height = '0px';
+      clearButton[0].disabled = false;
+      clearButtonIcon[0].disabled = false;
+    }, 1500)
 
 
     clearButtonIcon[0].style.position = 'fixed';
@@ -107,14 +110,13 @@ class App extends Component {
     setTimeout(function () {
       clearButton[0].style.transition = '0s';
       clearButton[0].style.transform = 'translateX(0px)';
-      clearButton[0].disabled = false;
-      clearButtonIcon[0].disabled = false;
       setTimeout(function () {
-        invertedItalianHand[0].style.transform = 'translateX(40px)';
+        invertedItalianHand[0].style.transition = '0.1s linear';
+        invertedItalianHand[0].style.transform = 'translateX(0px)';
         clearButton[0].style.transition = '0.2s';
         clearButton[0].style.opacity = '1';
-      }, 500)
-    }, 2000);
+      }, 200)
+    }, 1500);
   }
 
   
