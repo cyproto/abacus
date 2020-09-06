@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FaTrash } from 'react-icons/fa';
-import InvertedItalianHand from '../1599230976526.png';
+import InvertedItalianHand from '../1599403601116.png';
 
 class Panel extends Component {
   render() {

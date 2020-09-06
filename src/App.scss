@@ -284,10 +284,10 @@ header {
 
 .trash-icon {
   position: relative;
-  top: -5px;
-  left: -20px;
-  height: 35px;
-  width: 47px;
+  top: -3px;
+  left: -5px;
+  height: 28px;
+  width: 35px;
 }
 
 .inverted-italian-hand {
@@ -297,8 +297,8 @@ header {
   background-position: top center;
   overflow: hidden;
   height: 0px;
-  width: 400px;
-  top: -40px;
+  width: 204px;
+  top: -30px;
   right: -200px;
 }
 
@@ -489,11 +489,11 @@ header {
       transition: .5s;
     }
   }
-  .trash-icon {
+  .trash-icon {  
     position: relative;
-    top: -5px;
-    left: -25px;
-    height: 35px;
-    width: 50px;
+    top: -3px;
+    left: -6px;
+    height: 28px;
+    width: 35px;
   }
 }
