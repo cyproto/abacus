@@ -133,6 +133,7 @@ class App extends Component {
             <div className="right-line"></div>
             <div className="top-line"></div>
             <div className="bottom-line"></div>
+            <div className="center-line"></div>
             <img className="inverted-italian-hand" src={InvertedItalianHand}></img>
             <ul className="abacus-list" >
               {this.state.ups.map((up, index) => {
