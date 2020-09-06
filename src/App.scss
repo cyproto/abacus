@@ -260,12 +260,13 @@ header {
 .pannel {
   position: absolute;
   top: 230px;
-  right: 0px;
+  right: 317px;
   z-index: 10;
   display: -ms-grid;
   display: grid;
   place-items: center;
   button {
+    border: none;
     height: 42px;
     width: 42px;
     display: -ms-grid;
@@ -274,13 +275,14 @@ header {
     border-radius: 50px;
     background: #603813;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 17px;
     -webkit-transition: .5s;
     -o-transition: .5s;
     transition: .5s;
   }
   .trash-icon {
-    position: absolute;
+    position: relative;
+    top: auto;
   }
 }
 
@@ -468,8 +470,10 @@ header {
     z-index: 10;
     position: absolute;
     top: 230px;
-    right: 0px;
+    right: 262px;
+    font-size: 17px;
     button {
+      border: none;
       height: 40px;
       width: 40px;
       border-radius: 50px;
@@ -479,6 +483,10 @@ header {
       -webkit-transition: .5s;
       -o-transition: .5s;
       transition: .5s;
-    } 
+    }
+    .trash-icon {
+      position: relative;
+      top: auto;
+    }
   }
 }
