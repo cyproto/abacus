@@ -1,14 +1,5 @@
 body {
 	background: #ffffff;
-	height: 100%;
-  width: 100%;
-  zoom: 1.5;
-  -ms-zoom: 1.5;
-  -webkit-zoom: 1.5;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  position: absolute;
 }
 
 ul,li {
@@ -25,22 +16,24 @@ h1 {
   font-size: 60px;
 }
 
-footer {
-  margin-top: 50px;
-}
-
 .content {
+  zoom: 1.5;
+  -ms-zoom: 1.5;
+  -webkit-zoom: 1.5;
   -webkit-box-shadow: 0px 0px 25px 15px #fff;
           box-shadow: 0px 0px 25px 15px #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+          position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  vertical-align: middle;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
   height: 232px;
   width: 700px;
   border: solid black 12px;
@@ -302,74 +295,30 @@ header {
   right: -200px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   body {
     -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
             transform: rotate(90deg);
-    background: #ffffff;
-    display: -ms-grid;
-    display: grid;
-    place-items: center;
-    top: -50px;
-    left: 60%;
-    position: absolute;
-  }
-
-  @-moz-document url-prefix() {
-    body {
-      -webkit-transform: rotate(90deg);
-          -ms-transform: rotate(90deg);
-              transform: rotate(90deg);
-      background: #ffffff;
-      display: -ms-grid;
-      display: grid;
-      place-items: center;
-      top: 575px;
-      left: 130%;
-      position: absolute;
-      -moz-transform:  scale(4) rotate(90deg);
-      -moz-margin-start : 150px;
-    }
-
-    .content {
-      -webkit-box-shadow: 0px 0px 25px 15px #fff;
-              box-shadow: 0px 0px 25px 15px #fff;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      position: relative;
-      height: 232.5px;
-      width: 585px;
-      border: solid black 12px;
-      border-radius: 25px;
-      margin-right: 12px;
-    }
   }
 
   .content {
-    zoom: 140%;
-    -webkit-box-shadow: 0px 0px 25px 15px #fff;
-            box-shadow: 0px 0px 25px 15px #fff;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: relative;
+    zoom: 1.15;
+    -ms-zoom: 1.15;
+    -webkit-zoom: 1.15;
     height: 232.5px;
     width: 586px;
+    left: 135px;
     border: solid black 12px;
     border-radius: 25px;
-    margin-right: 12px;
+  }
+
+  @-moz-document url-prefix() {
+    .content {
+      left: 175px;
+      top: -10px;
+      -moz-transform: scale(1.03);
+    }
   }
 
   .downbead {
@@ -473,7 +422,7 @@ header {
   .pannel {
     z-index: 10;
     position: absolute;
-    top: 230px;
+    top: 225px;
     right: 262px;
     font-size: 17px;
     button {
