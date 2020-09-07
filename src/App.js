@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import InvertedItalianHand from './1599403601116.png';
+import InvertedItalianHand from './1599230976526.png';
 import './App.scss';
 
 //@Components
@@ -68,14 +68,14 @@ class App extends Component {
 
     clearButton[0].disabled = true;
     clearButtonIcon[0].disabled = true;
-    invertedItalianHand[0].style.height = '158px';
+    invertedItalianHand[0].style.height = '220px';
     invertedItalianHand[0].style.opacity = '1';
     invertedItalianHand[0].style.visibility = 'visible';
     invertedItalianHand[0].style.transition = '1s linear, height 0s, visibility 0s';
     if (window.outerWidth < 630) {
-      invertedItalianHand[0].style.transform = 'translateX(-590px)';
+      invertedItalianHand[0].style.transform = 'translateX(-560px)';
     } else {
-      invertedItalianHand[0].style.transform = 'translateX(-700px)';
+      invertedItalianHand[0].style.transform = 'translateX(-675px)';
     }
 
     setTimeout(function () {
