@@ -305,6 +305,11 @@ header {
             transform: rotate(90deg);
   }
 
+  .container {
+    height: 100vw;
+    width: 100vh;
+  }
+
   .content {
     zoom: 1.15;
     -ms-zoom: 1.15;
@@ -314,18 +319,18 @@ header {
     border: solid black 12px;
     border-radius: 25px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    right: 50%;
-    bottom: 50%;
   }
 
   @-moz-document url-prefix() {
+    .container {
+      height: 0vw;
+      width: 0vh;
+    }
     .content {
       left: 175px;
       top: -10px;
       width: 585px;
-      -moz-transform: scale(1.03);
+      -moz-transform: scale(1.05);
     }
   }
 
