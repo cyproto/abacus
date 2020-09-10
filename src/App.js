@@ -62,7 +62,7 @@ class App extends Component {
   async clearAll() {
     var up = document.getElementsByClassName('upbead');
     var down = document.getElementsByClassName('down-beads-container');
-    var clearButton = document.getElementsByClassName('clear');
+    var clearButton = document.getElementsByClassName('pannel');
     var clearButtonIcon = document.getElementsByClassName('trash-icon');
     var invertedItalianHand = document.getElementsByClassName('inverted-italian-hand');
 
@@ -105,8 +105,6 @@ class App extends Component {
       timer = this.animateClearBeads(up, down, i, timer);
     }
     setTimeout(function () {
-      clearButton[0].style.transition = '0s';
-      clearButton[0].style.transform = 'translateX(0px)';
       setTimeout(function () {
         invertedItalianHand[0].style.transition = '0.1s linear';
         invertedItalianHand[0].style.transform = 'translateX(0px)';
