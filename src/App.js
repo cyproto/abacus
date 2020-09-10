@@ -72,7 +72,7 @@ class App extends Component {
     invertedItalianHand[0].style.opacity = '1';
     invertedItalianHand[0].style.visibility = 'visible';
     invertedItalianHand[0].style.transition = '1s linear, height 0s, visibility 0s';
-    if (window.outerWidth < 630) {
+    if (window.outerWidth < 768) {
       invertedItalianHand[0].style.transform = 'translateX(-560px)';
     } else {
       invertedItalianHand[0].style.transform = 'translateX(-675px)';
