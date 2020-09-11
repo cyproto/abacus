@@ -1,7 +1,5 @@
 body {
   background: #ffffff;
-  width: 100%;
-  height: 100%;
 }
 
 ul,li {
@@ -277,12 +275,27 @@ header {
   }
 }
 
+#abacus {
+  background-color: #fff;
+}
+
 .trash-icon {
   position: relative;
   top: -3px;
   left: -5px;
   height: 28px;
   width: 35px;
+}
+
+.full-screen-toggle {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+  background: #915F2D;
 }
 
 .inverted-italian-hand {
@@ -306,14 +319,14 @@ header {
   }
 
   .container {
-    height: 100vw;
+    height: 90vw;
     width: 100vh;
   }
 
   .content {
-    zoom: 1.15;
-    -ms-zoom: 1.15;
-    -webkit-zoom: 1.15;
+    zoom: 1.08;
+    -ms-zoom: 1.08;
+    -webkit-zoom: 1.08;
     height: 232.5;
     width: 587px;
     border: solid black 12px;
@@ -322,15 +335,9 @@ header {
   }
 
   @-moz-document url-prefix() {
-    .container {
-      height: 0vw;
-      width: 0vh;
-    }
     .content {
-      left: 175px;
-      top: -10px;
-      width: 585px;
-      -moz-transform: scale(1.05);
+      margin-left: 40px;
+      -moz-transform: scale(1.11);
     }
   }
 
@@ -458,4 +465,20 @@ header {
     height: 28px;
     width: 35px;
   }
+
+  .full-screen-toggle {
+    position: fixed;
+    z-index: 1000;
+    top: -5px;
+    left: 0px;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.full-screen-icon{
+  position: relative;
+  top: 2px;
 }

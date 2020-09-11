@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import InvertedItalianHand from './1599230976526.png';
 import './App.scss';
+import FullscreenIcon from '@material-ui/icons/Fullscreen';
+import FullscreenExitIcon from '@material-ui/icons/FullscreenExit';
 
 //@Components
 import AbacusItem from "./components/AbacusItem";
 import Pannel from "./components/Pannel";
 
+var isFullScreenMode;
 class App extends Component {
   constructor(props) {
     super(props);
+    isFullScreenMode = false;
     this.abacusItemRef = React.createRef();
     this.state = {
       ups: [{ isUp: true }, { isUp: true }, { isUp: true }, { isUp: true },
@@ -38,6 +42,42 @@ class App extends Component {
       clearAll: false,
     }
     this.clearAll = this.clearAll.bind(this);
+    this.toggleFullScreen = this.toggleFullScreen.bind(this);
+  }
+
+  toggleFullScreen() {
+    if (!isFullScreenMode) {
+      this.requestFullScreen(document.getElementById('root-element'));
+    } else {
+      this.exitFullScreen();
+    }
+    isFullScreenMode = !isFullScreenMode;
+    this.setState({
+      isFullScreenMode: isFullScreenMode,
+    });
+  }
+
+  requestFullScreen(element) {
+    var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen;
+    if (requestMethod) {
+      requestMethod.call(element);
+    }
+  }
+
+  exitFullScreen() {
+    if (document.fullscreenElement || 
+      document.webkitFullscreenElement || 
+      document.mozFullScreenElement) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      }
+    }
   }
 
   changeUpState(index, up) {
@@ -114,13 +154,17 @@ class App extends Component {
     }, 1500);
   }
 
-  
+
 
   render() {
     return (
       <div>
         <header>
         </header>
+        <button className="full-screen-toggle" onClick={this.toggleFullScreen}>
+          {!isFullScreenMode ? (<FullscreenIcon className="full-screen-icon" />)
+            : (<FullscreenExitIcon className="full-screen-icon" />)}
+        </button>
         <div className="container">
           <div className="content">
             <Pannel recover={this.state} clearAll={this.clearAll} />
