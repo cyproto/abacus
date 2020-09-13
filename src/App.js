@@ -65,8 +65,8 @@ class App extends Component {
   }
 
   exitFullScreen() {
-    if (document.fullscreenElement || 
-      document.webkitFullscreenElement || 
+    if (document.fullscreenElement ||
+      document.webkitFullscreenElement ||
       document.mozFullScreenElement) {
       if (document.exitFullscreen) {
         document.exitFullscreen();
@@ -112,7 +112,7 @@ class App extends Component {
     invertedItalianHand[0].style.opacity = '1';
     invertedItalianHand[0].style.visibility = 'visible';
     invertedItalianHand[0].style.transition = '1s linear, height 0s, visibility 0s';
-    if (window.outerWidth < 768) {
+    if (window.outerWidth < 767 || (window.outerWidth > 481 && window.outerWidth < 1024) || (window.outerWidth == 1024 && window.outerHeight == 1366)) {
       invertedItalianHand[0].style.transform = 'translateX(-560px)';
     } else {
       invertedItalianHand[0].style.transform = 'translateX(-675px)';
@@ -161,10 +161,10 @@ class App extends Component {
       <div>
         <header>
         </header>
-        <button className="full-screen-toggle" onClick={this.toggleFullScreen}>
+        {/* <button className="full-screen-toggle" onClick={this.toggleFullScreen}>
           {!isFullScreenMode ? (<FullscreenIcon className="full-screen-icon" />)
             : (<FullscreenExitIcon className="full-screen-icon" />)}
-        </button>
+        </button> */}
         <div className="container">
           <div className="content">
             <Pannel recover={this.state} clearAll={this.clearAll} />

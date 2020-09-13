@@ -310,25 +310,32 @@ header {
   right: -320px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
+
+  #root {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
   body {
     background: #ffffff;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
     -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
             transform: rotate(90deg);
   }
 
-  .container {
-    height: 90vw;
-    width: 100vh;
-  }
-
   .content {
-    zoom: 1.08;
-    -ms-zoom: 1.08;
-    -webkit-zoom: 1.08;
+    zoom: 1.05;
+    -ms-zoom: 1.05;
+    -webkit-zoom: 1.05;
     height: 232.5;
-    width: 587px;
+    width: 590px;
     border: solid black 12px;
     border-radius: 25px;
     position: absolute;
@@ -336,8 +343,7 @@ header {
 
   @-moz-document url-prefix() {
     .content {
-      margin-left: 40px;
-      -moz-transform: scale(1.11);
+      -moz-transform: scale(1.0);
     }
   }
 
@@ -469,7 +475,7 @@ header {
   .full-screen-toggle {
     position: fixed;
     z-index: 1000;
-    top: -5px;
+    top: 20px;
     left: 0px;
     border: none;
     border-radius: 20px;
@@ -481,4 +487,17 @@ header {
 .full-screen-icon{
   position: relative;
   top: 2px;
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  .content {
+    zoom: 0.75;
+    -ms-zoom: 0.75;
+    -webkit-zoom: 0.75;
+    height: 228px;
+    width: 590px;
+    border: solid black 12px;
+    border-radius: 25px;
+    position: absolute;
+  }
 }
